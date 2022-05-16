@@ -9,4 +9,6 @@ export async function runNode(config: Config) {
   const app = buildApp(services, config)
   app.listen(config.port)
   services.logger.logNodeListening(config.port)
+  
+  setTimeout(() => return, 2000)
 }
